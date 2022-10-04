@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <title>Villalar</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-1.png">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab-1.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/simplebar/dist/simplebar.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/flatpickr/dist/flatpickr.min.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" media="screen" href="assets/css/app.css">
+
+  </head>
+
+
+  <!-- Body-->
+  <body class="fixed-bottom-btn">
+    <main>
+    <!-- Page content-->
+    <div class="container pt-5 pb-lg-4 mt-5 mb-sm-2">
+        <nav class="mb-4 pt-md-3" aria-label="Breadcrumb">
+            <div class="steps">
+                <div class="step active">
+                <div class="step-progress">
+                    <span class="step-progress-start"></span>
+                    <span class="step-progress-end"></span>
+                    <span class="step-number">1</span>
+                </div>
+                <div class="step-label">VİLLANI SEÇ</div>
+                </div>
+                <div class="step">
+                <div class="step-progress">
+                    <span class="step-progress-start"></span>
+                    <span class="step-progress-end"></span>
+                    <span class="step-number">2</span>
+                </div>
+                <div class="step-label">REZERVASYONU GÖNDER</div>
+                </div>
+                <div class="step">
+                <div class="step-progress">
+                    <span class="step-progress-start"></span>
+                    <span class="step-progress-end"></span>
+                    <span class="step-number">3</span>
+                </div>
+                <div class="step-label">TATİLE BAŞLA</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content-->
+        <div class="row">
+            <!-- Content-->
+            <div class="col-lg-8 col-md-7 mb-5">
+                <div class="p-3 mb-4" id="personal-info">
+                <!-- Inline steps: Vertical -->
+                <div class="steps steps-vertical">
+                    <div class="step">
+                    <div class="step-progress">
+                        <span class="step-progress-end"></span>
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="step-label">
+                        <h5 class="mb-2 pb-1">İletişim Bilgileriniz</h5>
+                        <div class="row ps-sm-2">
+                            <div class="col-12 col-sm-6 mb-3">
+                                <label for="ad-soyad" class="form-label fs-7 mb-1 opacity-60">Adınız ve Soyadınız <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control fs-7 py-3 px-3 border-1 border-theme-light rounded-3" name="isim" id="ad-soyad" required="">
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3">
+                                <label for="tc-pasaport" class="form-label fs-7 mb-1 opacity-60">TC Kimlik/Pasaport Numaranız <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control fs-7 py-3 px-3 border-1 border-theme-light rounded-3" name="tc" id="tc-pasaport" required="">
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3">
+                                <label for="e-posta" class="form-label fs-7 mb-1 opacity-60">E-posta Adresiniz <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control fs-7 py-3 px-3 border-1 border-theme-light rounded-3" name="email" id="e-posta" required="">
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3">
+                                <label for="telefon" class="form-label fs-7 mb-1 opacity-60">Telefon Numaranız <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control fs-7 py-3 px-3 border-1 border-theme-light rounded-3" name="telefon" id="telefon" required="">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="ikamet" class="form-label fs-7 mb-1 opacity-60">Adresiniz <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control fs-7 py-3 px-3 border-1 border-theme-light rounded-3" name="adres" id="ikamet">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="notunuz" class="form-label fs-7 mb-1 opacity-60">Notunuz</label>
+                                <textarea class="form-control fs-7 py-3 px-3 border-1 border-theme-light rounded-3" name="not" id="not" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="step">
+                    <div class="step-progress">
+                        <span class="step-progress-end"></span>
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="step-label">
+                        <h5 class="mb-2 pb-1">Ödeme Şekli *</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input checked type="radio" name="plan" id="kredikarti" />
+                                <label class="option-box d-flex flex-column align-items-start position-relative rounded-3 bg-white py-4 pe-3 pe-md-4 h-100" for="kredikarti">
+                                    <strong class="fw-medium mb-1">Kredi Kartı ile Ödeme</strong>
+                                    <span class="mb-0 fs-8 opacity-60">Bu Rezervasyonun ödemesini <strong class="fw-600">Kredi Kartı</strong> ile gerçekleştirmek istiyorum.</span>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" id="havale" name="plan" />
+                                <label class="option-box d-flex flex-column align-items-start position-relative rounded-3 bg-white py-4 pe-3 pe-md-4 h-100" for="havale">
+                                    <strong class="fw-medium mb-1">Havale yada EFT ile Ödeme</strong>
+                                    <span class="mb-0 fs-8 opacity-60">Bu Rezervasyonun ödemesini <strong class="fw-600">Havale yada EFT</strong> ile gerçekleştirmek istiyorum.</span>
+                                </label>     
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Ödeme Tutarı -->
+                    <div class="step">
+                    <div class="step-progress">
+                        <span class="step-progress-end"></span>
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="step-label">
+                        <h5 class="mb-2 pb-1">Ödeme Tutarı *</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input checked type="radio" name="plan" id="depozito" />
+                                <label class="option-box rounded-3 bg-white pt-3 pb-4 pe-3 pe-md-4 w-100 h-100 position-relative" for="depozito">
+                                    <h5 class="fs-3 fw-normal text-theme-first">1.857 ₺</h5>
+                                    <div class="d-flex flex-column align-items-start">
+                                        <strong class="fw-medium mb-1">20% Depozito</strong>
+                                        <span class="mb-0 fs-8 opacity-60"><strong class="fw-600">Sadece Depozito</strong> ödemek istiyorum.</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" id="tamami" name="plan" />
+                                <label class="option-box rounded-3 bg-white pt-3 pb-4 pe-3 pe-md-4 w-100 h-100 position-relative" for="tamami">
+                                    <h5 class="fs-3 fw-normal text-theme-first">9.286 ₺</h5>
+                                    <div class="d-flex flex-column align-items-start">
+                                        <strong class="fw-medium mb-1">Tamamı</strong>
+                                        <span class="mb-0 fs-8 opacity-60">Ücretin <strong class="fw-600">tamamını</strong> ödemek istiyorum.</span>
+                                    </div>
+                                </label>    
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Bilinmesi Gerekenler -->
+                    <div class="step">
+                    <div class="step-progress">
+                        <span class="step-progress-end"></span>
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="step-label">
+                        <h5 class="mb-2 pb-1">Bilinmesi Gerekenler</h5>
+                        <div class="row">
+                            <ul>
+                                <li class="d-flex align-items-start flex-wrap py-2">
+                                <span class="fs-7">Hasar Depozitosu</span>
+                                <strong class="ms-auto fw-600 fs-15 text-theme-first" data-doviz="tl" data-kur="0" data-price="1000" data-doviz-goster="1">1.000 ₺</strong>
+                                <div class="w-100 opacity-60 fs-8 py-2">
+                                    Hasar depozitosu villaya girişte ekstra olarak alınır ve villadan çıkış yaparken bir hasar olmaması durumunda geri iade edilir
+                                </div>
+                                </li>
+                                <li class="d-flex align-items-start flex-wrap py-2">
+                                <span class="fs-7">Fiyata Dahil Olanlar</span>
+                                <div class="w-100 opacity-60 fs-8 py-2">
+                                    Elektrik Kullanımı,Su Kullanımı,İnternet,Havuz ve Bahçe Bakımı,Tüpgaz,Giriş Temizliği
+                                </div>
+                                </li>
+                                <li class="d-flex align-items-start flex-wrap py-2">
+                                <span class="fs-7">Giriş Saati:</span>
+                                <strong class="ms-auto fw-600 fs-15 text-theme-first">16:00</strong>
+                                </li>
+                                <li class="d-flex align-items-start flex-wrap py-2">
+                                <span class="fs-7">Çıkış Saati:</span>
+                                <strong class="ms-auto fw-600 fs-15 text-theme-first">10:00</strong>
+                                </li>
+                                <li class="d-flex align-items-start flex-wrap py-2">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#iptal" class="btn btn-primary rounded-6 text-white text-uppercase"><svg class="me-2" width="21" height="21" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M10.24 20.48h3.993a.6.6 0 0 0 .424-.176l5.648-5.647a.6.6 0 0 0 .175-.424V6.247a.6.6 0 0 0-.175-.424L14.657.176A.6.6 0 0 0 14.233 0H6.247a.6.6 0 0 0-.424.176L.176 5.823A.6.6 0 0 0 0 6.247v7.986a.6.6 0 0 0 .176.424l5.647 5.647a.6.6 0 0 0 .424.176h3.993Z" fill="#FFF"></path><path d="M10.993 4.24H9.487a.6.6 0 0 0-.599.645l.512 6.8a.6.6 0 0 0 .598.555h.484a.598.598 0 0 0 .598-.555l.27-3.597.242-3.203a.6.6 0 0 0-.599-.645ZM9.042 15.038a1.198 1.198 0 0 1 2.396 0v.004a1.203 1.203 0 0 1-.35.847 1.194 1.194 0 0 1-.848.351 1.198 1.198 0 0 1-1.198-1.198v-.004Z" fill="#EB9643"></path></g></svg><span>İPTAL ŞARTLARI</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Sidebar-->
+            <aside class="col-lg-4 col-md-5 ms-lg-auto pb-1">
+                <div class="card shadow-sm mb-4 position-sticky" style="top:9rem;">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <img class="lazy card-img-top" src="assets/img/upload/villa/villa.jpg" data-src="assets/img/upload/villa/villa.jpg" alt="Villa İsim">
+                        </div>
+                        <form class="needs-validation py-3" novalidate="">
+                            <div class="input-group mb-3">
+                                <input class="form-control date-picker border-0 border-bottom rounded pe-5" type="text" placeholder="28 Eylül / 30 Eylül " data-datepicker-options="{&quot;altInput&quot;: true, &quot;altFormat&quot;: &quot;F j, Y&quot;, &quot;dateFormat&quot;: &quot;Y-m-d&quot;}"><i class="fi-calendar position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                            </div>
+                            <div class="input-group mb-3 position-relative">
+                                <input class="kisi-input form-control border-0 border-bottom rounded pe-5 disabled" type="text" placeholder="Kişi Sayısı"><i class="fi-users position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                                <div class="kisi-card position-absolute top-80 w-100">
+                                    <div class="card card-body">
+                                        <button type="button" class="kisi-btn btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="offcanvas"></button>
+                                        <div class="row py-4">
+                                            <div class="py-1 d-flex align-items-center">
+                                                <div class="flex-fill">
+                                                    Yetişkin
+                                                </div>
+                                                <input class="numberstyle" type="number" min="0" max="90" step="1" value="0">
+                                            </div>
+                                            <div class="py-1 d-flex align-items-center">
+                                                <div class="flex-fill">
+                                                    Çocuk
+                                                </div>
+                                                <input class="numberstyle" type="number" min="0" max="90" step="1" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="px-4 pb-3">
+                                    <ul class="list-unstyled payment-summary mb-0">
+                                        <li class="d-flex flex-row py-2 fs-7 hs_item"><span class="text-light-5">Konaklama Süresi</span><strong class="ms-auto text-dark fw-normal val">6 Gece</strong></li>
+                                        <li class="d-flex flex-row py-2 fs-7 hs_item"><span class="text-light-5">Konaklama Tutarı</span><strong class="ms-auto text-dark fw-normal val">6.814 ₺</strong></li>
+                                        <li class="d-flex flex-row py-2 fs-7 hs_item d-none"><span class="text-light-5">Elektrik Ücreti</span><strong class="ms-auto text-dark fw-normal val">-</strong></li>
+                                        <li class="d-flex flex-row py-2 fs-7 hs_item d-none"><span class="text-light-5">Temizlik Ücreti</span><strong class="ms-auto text-dark fw-normal val">-</strong></li>
+                                        <li class="d-flex flex-row py-2 fs-7 hs_item"><span class="text-light-5">Ön Ödeme</span><strong class="ms-auto text-dark fw-normal val">2.385 ₺</strong></li>
+                                        <li class="d-flex flex-row py-2 fs-7 hs_item"><span class="text-light-5">Girişte Yapılacak</span><strong class="ms-auto text-dark fw-normal val">4.429 ₺</strong></li>
+                                        <li class="d-flex flex-row align-items-center py-2 fs-7 hs_item"><span class="text-light-5">Toplam</span><strong class="ms-auto text-dark fw-normal fs-5 val">6.814 ₺</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-lg btn-primary d-block w-100" type="submit">Rezervasyon Yap</button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    </main>
+
+
+
+
+    <!-- İptal Şartları Modal -->
+    <div id="iptal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">İptal Şartları</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+<!-- Vendor scrits: js libraries and plugins-->
+<script src='assets/vendor/jquery/jquery-3.6.1.min.js'></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+<!-- Main theme script-->
+<script src="assets/js/app.js"></script>
+
+
+
+    
+</body>
+</html>

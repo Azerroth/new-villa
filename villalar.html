@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <title>Villalar</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-1.png">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab-1.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/simplebar/dist/simplebar.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/tiny-slider/dist/tiny-slider.css">
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" media="screen" href="assets/css/app.css">
+
+  </head>
+  <!-- Body-->
+  <body class="fixed-bottom-btn">
+    <!-- Main -->
+    <main class="page-wrapper">
+      <!-- Page container-->
+      <div class="container-fluid mt-5 pt-5 p-0">
+        <div class="row g-0 mt-n3">
+          <!-- Filters sidebar (Offcanvas on mobile)-->
+          <aside class="col-lg-4 col-xl-3 border-top-lg border-end-lg shadow-sm px-3 px-xl-4 px-xxl-5 pt-lg-2">
+            <div class="offcanvas offcanvas-start offcanvas-collapse" id="filters-sidebar">
+              <div class="offcanvas-header d-flex d-lg-none align-items-center">
+                <h2 class="h5 mb-0"><i class="fi-filter me-2"></i>Filtre</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body py-lg-4 ">
+                <!-- Tarihler -->
+                <div class="row pb-4 mb-2">
+                  <h3 class="h6">TARİHLERİNİZİ SEÇİN</h3>
+                
+                  <div class="col-md-6 py-2 text-center">
+                    <label class="form-label">GİRİŞ</label>
+                    <input type="text" class="form-control border-0 border-bottom text-center shadow-none" placeholder="5 Ağustos">
+                  </div>
+                  <div class="col-md-6 py-2 text-center">
+                    <label class="form-label">ÇIKIŞ</label>
+                    <input type="text" class="form-control border-0 border-bottom text-center shadow-none" placeholder="20 Ağustos">
+                  </div>
+                  <div class="py-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="3gun">
+                      <label class="form-check-label fs-sm" for="3gun">3 gün önceki ve sonraki villarıda göster</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="indirimvilla">
+                      <label class="form-check-label fs-sm" for="indirimvilla">Sadece indirimli villalar</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Kişi Sayısı -->
+                <div class="row pb-4 mb-2">
+                  <h3 class="h6">KİŞİ SAYISINI SEÇİN</h3>
+                  <div class="py-2 d-flex align-items-center">
+                    <div class="flex-fill">Yetişkin</div>
+                    <input class="numberstyle" type="number" min="0" max="90" step="1" value="0">
+                  </div>
+                  <div class="py-2 d-flex align-items-center">
+                    <div class="flex-fill">Çocuk</div>
+                    <input class="numberstyle" type="number" min="0" max="90" step="1" value="0">
+                  </div>
+                </div>
+                <!-- Fiyat Aralığı -->
+                <div class="pb-4 mb-2">
+                  <h3 class="h6">FİYAT ARALIĞI (HAFTALIK)</h3>
+                  <div class="d-flex align-items-center">
+                    <input class="form-control w-100" type="number" min="200" max="100000" step="200" placeholder="Min">
+                    <div class="mx-2">&mdash;</div>
+                    <input class="form-control w-100" type="number" min="200" max="100000" step="200" placeholder="Max">
+                  </div>
+                </div>
+                <!-- Villa Puanı -->
+                <div class="pb-4 mb-2">
+                  <h3 class="h6">VİLLA PUANI</h3>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="5-star">
+                    <label class="form-check-label fs-sm align-middle mt-n2" for="5-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i></span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="4-star">
+                    <label class="form-check-label fs-sm align-middle mt-n2" for="4-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i></span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="3-star">
+                    <label class="form-check-label fs-sm align-middle mt-n2" for="3-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i></span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="2-star">
+                    <label class="form-check-label fs-sm align-middle mt-n2" for="2-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i></span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="1-star">
+                    <label class="form-check-label fs-sm align-middle mt-n2" for="1-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- Villa Seçenekleri -->
+                <div class="pb-4 mb-2">
+                  <h3 class="h6">VİLLA SEÇENEKLERİ</h3>
+                  <div class="overflow-auto" data-simplebar="" data-simplebar-auto-hide="false" style="height: 11rem;">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="all" checked="">
+                      <label class="form-check-label fs-sm" for="all">Tümü</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="luks">
+                      <label class="form-check-label fs-sm" for="luks">Lüks Villalar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="room">
+                      <label class="form-check-label fs-sm" for="room">Deniz Manzaralı Villalar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="room">
+                      <label class="form-check-label fs-sm" for="room">Muhafazakar Villalar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="room">
+                      <label class="form-check-label fs-sm" for="room">Çocuk Havuzlu Villalar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="room">
+                      <label class="form-check-label fs-sm" for="room">Kapalı Havuzlu Villalar</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bölgeler -->
+                <div class="pb-4 mb-2">
+                  <h3 class="h6">BÖLGELER</h3>
+                  <div class="overflow-auto" data-simplebar="" data-simplebar-auto-hide="false" style="height: 11rem;">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="antalya">
+                      <label class="form-check-label fs-sm" for="antalya">Antalya</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="kalkan">
+                      <label class="form-check-label fs-sm" for="kalkan">Kalkan</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="kas">
+                      <label class="form-check-label fs-sm" for="kas">Kaş</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="demre">
+                      <label class="form-check-label fs-sm" for="demre">Demre</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="finike">
+                      <label class="form-check-label fs-sm" for="finike">Finike</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fethiye">
+                      <label class="form-check-label fs-sm" for="fethiye">Fethiye</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="bodrum">
+                      <label class="form-check-label fs-sm" for="bodrum">Bodrum</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Genel Özellikler -->
+                <div class="pb-4 mb-2">
+                  <h3 class="h6">GENEL ÖZELLİKLER</h3>
+                  <div class="overflow-auto" data-simplebar="" data-simplebar-auto-hide="false" style="height: 11rem;">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="dogamanzara">
+                      <label class="form-check-label fs-sm" for="dogamanzara">Doğa Manzaralı</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="isitmalihavuz">
+                      <label class="form-check-label fs-sm" for="sitmalihavuz">Isıtmalı Havuz</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="jakuzi">
+                      <label class="form-check-label fs-sm" for="jakuzi">Jakuzi</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="denizmanzara">
+                      <label class="form-check-label fs-sm" for="denizmanzara">Deniz Manzaralı</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="kapalihavuz">
+                      <label class="form-check-label fs-sm" for="kapalihavuz">Kapalı Havuzlu</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="sinamaodasi">
+                      <label class="form-check-label fs-sm" for="sinamaodasi">Sinema Odası</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bahçe Veya Havuz Teras -->
+                <div class="pb-4 mb-2">
+                  <h3 class="h6">BAHÇE VEYA HAVUZ TERASI</h3>
+                  <div class="overflow-auto" data-simplebar="" data-simplebar-auto-hide="false" style="height: 5rem;">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="tenismanzarasi">
+                      <label class="form-check-label fs-sm" for="tenismanzarasi">Tenis Masası</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="langirt">
+                      <label class="form-check-label fs-sm" for="langirt">Langırt</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="bilardomasasi">
+                      <label class="form-check-label fs-sm" for="bilardomasasi">Bilardo Masası</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-top py-4">
+                  <button class="btn btn-outline-primary" type="button"><i class="fi-rotate-right me-2"></i>Filtreleri Sıfırla</button>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <!-- Page content-->
+          <div class="col-lg-8 col-xl-9 position-relative overflow-hidden pb-5 pt-4 px-3 px-xl-4 px-xxl-5">
+            <!-- Breadcrumb-->
+            <nav class="mb-3 pt-md-2" aria-label="Breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../"><i class="fi-home ms-1 mt-n1 me-2 fs-lg text-muted"></i>Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Kiralık Villalar</li>
+              </ol>
+            </nav>
+            <!-- Title-->
+            <div class="d-sm-flex align-items-center justify-content-between pb-3 pb-sm-4">
+              <h1 class="h2 mb-sm-0">Kiralık Villalar</h1>
+            </div>
+            <!-- Sorting-->
+            <div class="d-flex flex-sm-row flex-column align-items-sm-center align-items-stretch my-2">
+              <div class="d-flex align-items-center flex-shrink-0">
+                <label class="fs-sm me-2 pe-1 text-nowrap" for="sortby"><i class="fi-arrows-sort text-muted mt-n1 me-2"></i>Sıralama</label>
+                <select class="form-select form-select-sm" id="sortby">
+                  <option>Gelişmiş Sıralama</option>
+                  <option>Fiyata Göre (Önce En Düşük)</option>
+                  <option>Fiyata Göre (Önce En Yüksek)</option>
+                  <option>Kişi Sayısına Göre (Önce En Düşük)</option>
+                  <option>Kişi Sayısına Göre (Önce En Yüksek)</option>
+                </select>
+              </div>
+
+              <hr class="d-none d-sm-block w-100 mx-4">
+              <div class="d-none d-sm-flex align-items-center flex-shrink-0 text-muted me-3"><i class="fi-check-circle me-2"></i>
+                <span class="fs-sm">148 listelendi</span>
+              </div>
+              
+            </div>
+            <!-- Catalog grid-->
+            <div class="row g-4 py-4">
+              <!-- Item-->
+              <div class="col-sm-6 col-xl-4">
+                <div class="card shadow-sm card-hover border-0 h-100">
+                  <div class="tns-carousel-wrapper card-img-top card-img-hover">
+                    <a class="img-overlay" href="#"></a>
+                    <div class="position-absolute start-0 top-0 pt-3 ps-3">
+                      <span class="d-table badge bg-success mb-1">Balayı Villası</span>
+                      <span class="d-table badge bg-info">Jakuzili</span>
+                    </div>
+                    <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                      <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Favoriye Ekle"><i class="fi-heart"></i></button>
+                    </div>
+
+                    <div class="content-overlay end-0 bottom-0 py-3 pe-3">
+                      <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle" type="button"data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fi-calendar-alt"></i></button>
+                    </div>
+                    <div class="tns-carousel-inner">
+                    <img class="lazy" src="" data-src="assets/img/upload/villa/villa.jpg" alt="Image">
+                    <img class="lazy" src="" data-src="assets/img/upload/villa/villa-2.jpg" alt="Image">
+                    </div>
+                  </div>
+                  <div class="card-body position-relative pb-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                      <h3 class="h6 fs-base"><a class="nav-link stretched-link" href="#">Villa Plato</a></h3>
+                      <p class="fs-sm text-muted"><i class="fi-map-pin mt-n1 me-2"></i>Kalkan / Patara</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end mx-100 text-end">
+                        <span class="fs-xs">Haftalık</span> 
+                        <del class="fs-18 text-danger"><b>7.168 ₺</b></del>
+                        <span class="text-warning fw-bold fs-6">6.500 ₺</span>
+                        <span class="fs-xs">'den başlayan fiyatlar</span>
+                      </div>
+                    </div>
+                    <li class="list-inline-item pe-1"><i class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.5</b><span class="text-muted">&nbsp;(13)</span></li>
+                  </div>
+                  <div class="card-footer d-flex align-items-center justify-content-between mx-3 pt-3 text-nowrap">
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-users ms-1 mt-n1 me-2 fs-lg text-muted"></i>4 Kişi</span>
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-bed ms-1 mt-n1 me-2 fs-lg text-muted"></i>2 Yatak</span>
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-bath ms-1 mt-n1 me-2 fs-lg text-muted"></i>1 Banyo</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item-->
+              <div class="col-sm-6 col-xl-4">
+                <div class="card shadow-sm card-hover border-0 h-100">
+                  <div class="tns-carousel-wrapper card-img-top card-img-hover">
+                    <a class="img-overlay" href="#"></a>
+                    <div class="position-absolute start-0 top-0 pt-3 ps-3">
+                      <span class="d-table badge bg-success mb-1">Balayı Villası</span>
+                      <span class="d-table badge bg-info">Jakuzili</span>
+                    </div>
+                    <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                      <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Favoriye Ekle"><i class="fi-heart"></i></button>
+                    </div>
+
+                    <div class="content-overlay end-0 bottom-0 py-3 pe-3">
+                      <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle" type="button"data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fi-calendar-alt"></i></button>
+                    </div>
+                    <div class="tns-carousel-inner">
+                    <img class="lazy" src="" data-src="assets/img/upload/villa/villa-2.jpg" alt="Image">
+                    <img class="lazy" src="" data-src="assets/img/upload/villa/villa.jpg" alt="Image">
+                    </div>
+                  </div>
+                  <div class="card-body position-relative pb-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                      <h3 class="h6 fs-base"><a class="nav-link stretched-link" href="#">Villa Plato</a></h3>
+                      <p class="fs-sm text-muted"><i class="fi-map-pin mt-n1 me-2"></i>Kalkan / Patara</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end mx-100 text-end">
+                        <span class="fs-xs">Haftalık</span> 
+                        <span class="text-warning fw-bold fs-6">6.500 ₺</span>
+                        <span class="fs-xs">'den başlayan fiyatlar</span>
+                      </div>
+                    </div>
+                    <li class="list-inline-item pe-1"><i class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.5</b><span class="text-muted">&nbsp;(13)</span></li>
+                  </div>
+                  <div class="card-footer d-flex align-items-center justify-content-between mx-3 pt-3 text-nowrap">
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-users ms-1 mt-n1 me-2 fs-lg text-muted"></i>4 Kişi</span>
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-bed ms-1 mt-n1 me-2 fs-lg text-muted"></i>2 Yatak</span>
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-bath ms-1 mt-n1 me-2 fs-lg text-muted"></i>1 Banyo</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item-->
+              <div class="col-sm-6 col-xl-4">
+                <div class="card shadow-sm card-hover border-0 h-100">
+                  <div class="tns-carousel-wrapper card-img-top card-img-hover">
+                    <a class="img-overlay" href="#"></a>
+                    <div class="position-absolute start-0 top-0 pt-3 ps-3">
+                      <span class="d-table badge bg-success mb-1">Balayı Villası</span>
+                      <span class="d-table badge bg-info">Jakuzili</span>
+                    </div>
+                    <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                      <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Favoriye Ekle"><i class="fi-heart"></i></button>
+                    </div>
+
+                    <div class="content-overlay end-0 bottom-0 py-3 pe-3">
+                      <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle" type="button"data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fi-calendar-alt"></i></button>
+                    </div>
+                    <div class="tns-carousel-inner">
+                    <img class="lazy" src="" data-src="assets/img/upload/villa/villa-3.jpg" alt="Image">
+                    <img class="lazy" src="" data-src="assets/img/upload/villa/villa-2.jpg" alt="Image">
+                    </div>
+                  </div>
+                  <div class="card-body position-relative pb-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                      <h3 class="h6 fs-base"><a class="nav-link stretched-link" href="#">Villa Plato</a></h3>
+                      <p class="fs-sm text-muted"><i class="fi-map-pin mt-n1 me-2"></i>Kalkan / Patara</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end mx-100 text-end">
+                        <span class="fs-xs">Haftalık</span> 
+                        <span class="text-warning fw-bold fs-6">6.500 ₺</span>
+                        <span class="fs-xs">'den başlayan fiyatlar</span>
+                      </div>
+                    </div>
+                    <li class="list-inline-item pe-1"><i class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.5</b><span class="text-muted">&nbsp;(13)</span></li>
+                  </div>
+                  <div class="card-footer d-flex align-items-center justify-content-between mx-3 pt-3 text-nowrap">
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-users ms-1 mt-n1 me-2 fs-lg text-muted"></i>4 Kişi</span>
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-bed ms-1 mt-n1 me-2 fs-lg text-muted"></i>2 Yatak</span>
+                    <span class="d-inline-block me-2 fs-sm"><i class="fi-bath ms-1 mt-n1 me-2 fs-lg text-muted"></i>1 Banyo</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Pagination-->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a href="#" class="page-link">Geri</a>
+                </li>
+                <li class="page-item d-sm-none">
+                  <span class="page-link page-link-static">2 / 5</span>
+                </li>
+                <li class="page-item active  d-none d-sm-block">
+                  <a href="#" class="page-link">1</a>
+                </li>
+                <li class="page-item d-none d-sm-block" aria-current="page">
+                  <span class="page-link">
+                    2
+                    <span class="visually-hidden">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">3</a>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">...</a>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">5</a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link">İleri</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+    <!-- Müsaitlik Takvimi Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Müsaitlik Takvimi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters sidebar toggle button (mobile)-->
+    <button class="btn btn-primary btn-sm w-100 rounded-0 fixed-bottom d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filters-sidebar"><i class="fi-filter me-2"></i>Filtrele</button>
+    
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll="">
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Yukarı</span>
+    <i class="btn-scroll-top-icon fi-chevron-up"></i>
+    </a>
+
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src='assets/vendor/jquery/jquery-3.6.1.min.js'></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <!-- Main theme script-->
+    <script src="assets/js/app.js"></script>
+
+
+
+    
+  
+
+    
+
+  </body>
+</html>
